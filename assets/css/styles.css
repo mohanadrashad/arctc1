@@ -22,7 +22,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: 'Cairo', sans-serif;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -110,8 +110,8 @@ button {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  /* margin-left: 1.5rem;
+  margin-right: 1.5rem; */
 }
 
 .grid {
@@ -143,8 +143,6 @@ button {
 
 /*=============== HEADER & NAV ===============*/
 .header {
-  
-  direction: ltr;
   position: fixed;
   top: 0;
   left: 0;
@@ -157,11 +155,12 @@ button {
 }
 
 .nav {
+  padding: 0 1rem;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  direction: rtl;
+  /* direction: rtl; */
 }
 
 .nav__logo {
@@ -179,6 +178,18 @@ button {
 
 .nav__logo:hover {
   color: #1e1e1e;
+}
+
+.select{
+  font-size: 1rem;
+  margin-left: 0;
+  font-family: 'Cairo', sans-serif;
+  padding: .6rem;
+  outline: transparent;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0 8px 29px rgb(0 0 0 / 5%);
 }
 
 @media screen and (min-width: 1024px) {
@@ -222,7 +233,7 @@ button {
   }
 
   .vision__des{
-    padding-right: 88px;
+    /* padding-right: 88px; */
   }
 
   .subscribe__left{
@@ -268,13 +279,13 @@ button {
 } */
 
 .home__container {
-  padding-top: 4rem;
+  /* padding: 4rem 2rem 0rem; */
   row-gap: 5.5rem;
   
 }
 
 .line__home{
-  direction: rtl;
+  /* direction: rtl; */
   font-family: 'Cairo', sans-serif;
 }
 
@@ -291,11 +302,11 @@ button {
 }
 
 .home__description1 {
-  direction: rtl;
+  /* direction: rtl; */
     margin-bottom: 3rem;
     grid-row: 2/-1;
     grid-column: 1/-1;
-    padding: 2px 0 2px 329px;
+    /* padding: 2px 0 2px 329px; */
     margin-top: 25px;
     font-family: 'Cairo', sans-serif;
     font-weight: 400;
@@ -306,7 +317,7 @@ button {
 }
 
 .home__description {
-  direction: rtl;
+  /* direction: rtl; */
     margin-bottom: 3rem;
     grid-row: 2/-1;
     grid-column: 1/-1;
@@ -370,23 +381,6 @@ button {
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 770px) {
-  .value__images{
-    grid-row : 2/3;
-  }
-
-  .nav__menu span{
-    display: none
-  }
-
-  .home__images{
-    top: -835px;
-    height: 245px;
-    left: -45px;
-  }
-
-  
-}
 
 /*=============== BUTTON ===============*/
 .button {
@@ -418,6 +412,11 @@ button {
   font-weight: bold;
 }
 
+.containerr  h1{
+  color: #fff !important;
+  font-size: 1rem;
+}
+
 .container__side {
   bottom: -8px;
   position: absolute;
@@ -431,11 +430,13 @@ button {
 .container__side--left {
 /* Position */
   left: -24px;
+  display: none;
 }
 
 .container__side--right {
 /* Position */
   right: -24px;
+  display: none;
 }
 
 .container__triangle {
@@ -449,11 +450,13 @@ button {
 .container__triangle--left {
   border-right-width: 0;
   left: 0;
+  
 }
 
 .container__triangle--right {
   border-left-width: 0;
   right: 0;
+  
 }
 
 
@@ -461,40 +464,27 @@ button {
 
 
 
-
-/*=============== LOGOS ===============*/
-
-.logos{
-  margin-bottom: 6rem;
-}
-
-.logos__container {
-  padding-top: 2rem;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem 2rem;
-  justify-items: center;
-}
-
-.logos__img img {
-  height: 150px;
-  opacity: .7;
-  transition: .3s;
-}
-
-.logos__img img:hover {
-  opacity: .8;
-}
-
-.logo__img6{
-  max-width: 100%;
-}
 
 /*=============== Vision ===============*/
 .vision{
   position: relative;
   background-color: #f2f2f2;
-  padding-bottom: 3rem !important;
+  padding-bottom: 6rem !important;
   margin-top: 8rem;
+  padding-top: 3rem !important;
+  
+}
+
+.vision::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background:#ea4c15;
+  top: 0;
+  left: 0;
+  display: flex;
+
 }
 
 .vision p{
@@ -525,15 +515,16 @@ button {
   width: 250px;
   height: 250px;
   justify-self: self-end;
+  align-self: center;
 }
 
 .vision__container{
-  direction: rtl;
+  /* direction: rtl; */
 }
 
 .vision__des{
-  direction: rtl;
-  margin-right: -94px;
+  /* direction: rtl; */
+  /* margin-right: -94px; */
   z-index: 99;
   font-family: 'Cairo', sans-serif;
 }
@@ -542,6 +533,63 @@ button {
   column-gap: 1rem;
 }
 
+.goals__images{
+  justify-self: end;
+  width: 379px;
+  height: 255px;
+  align-self: center;
+  margin-right: -6rem
+}
+
+
+
+/*===============partners===================*/
+
+.partners{
+  justify-self: start;
+  margin: 7 rem 0 1rem ;
+  display: flex;
+  width: 20%;
+  height: 3rem;
+  background: #ea4c15;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners h1{
+  color: #fff;
+}
+
+/*=============== LOGOS ===============*/
+
+.logos{
+  margin-bottom: 6rem;
+}
+
+.logos__container {
+  padding-top: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+
+.logos__img img {
+  height: 150px;
+  opacity: .7;
+  transition: .3s;
+}
+
+.logos__img img:hover {
+  opacity: .8;
+}
+
+.logo__img6{
+  max-width: 100%;
+}
+
+
+
+
 
 
 
@@ -549,21 +597,23 @@ button {
 /*=============== VALUE ===============*/
 .value__container {
   row-gap: 3rem;
+  padding: 2rem 2rem;
 }
 
 
 
 .value__content{
-  direction: rtl;
+  /* direction: rtl; */
   font-family: 'Cairo', sans-serif;
 }
 
 .value__images {
+  justify-self: end;
   position: relative;
   display: flex;
-  justify-content: center;
+  margin-right: -1.2rem;
   align-self: center;
-  width: 68%
+  width: 62%
 }
 
 .value__orbe {
@@ -665,14 +715,42 @@ button {
   transform: rotate(-180deg);
 }
 
+
+
+@media screen and (max-width: 770px) {
+  .value__images{
+    grid-row : 2/3;
+    justify-self: center;
+  }
+
+  .nav__menu span{
+    display: none
+  }
+
+  .home__images{
+    top: -52.1rem;
+    height: 15.3rem;
+    left: -2.8rem;
+  }
+
+  .footer__logo{
+    direction: ltr;
+  }
+
+  
+
+  
+}
+
 /*=============== CONTACT ===============*/
 .contact__container {
   row-gap: 2rem;
+  padding: 2rem 2rem;
 }
 
 .contact__content{
   font-family: 'Cairo', sans-serif;
-  direction: rtl;
+  /* direction: rtl; */
 }
 .contact__images {
   position: relative;
@@ -711,7 +789,7 @@ button {
   padding: 1.25rem .75rem;
   border-radius: .5rem;
   transition: .3s;
-  direction: ltr;
+  /* direction: ltr; */
 }
 
 .contact__card-info {
@@ -772,13 +850,13 @@ button {
   }
 
   .vision__container{
-    /* padding: 0 88px; */
+    padding: 2rem 2rem;
     gap: 7%;
   }
   
 
   .vision__images{
-    justify-self: self-start;
+    justify-self: center;
   }
 
   .home{
@@ -786,6 +864,10 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     height: 800px;
+  }
+
+  .home__container{
+    padding: 4rem 2rem 0rem;
   }
 }
 
@@ -845,12 +927,15 @@ button {
 /*=============== FOOTER ===============*/
 .footer__container {
   row-gap: 2.5rem;
+  /* width: fit-content; */
+  justify-content: center;
 }
 .footer__container .bx{
   font-size: 2rem;
+  
 }
 
-.footer__logo {
+/* .footer__logo {
   color: var(--first-color);
   font-size: var(--h3-font-size);
   font-weight: var(--font-semi-bold);
@@ -858,7 +943,7 @@ button {
   align-items: center;
   column-gap: .25rem;
   margin-bottom: .75rem;
-}
+} */
 .companyLogoF{
   margin-top: -39px;
   width: 263px;
@@ -866,9 +951,9 @@ button {
   padding: 34px;
 }
 
-.footer__logo i {
+/* .footer__logo i {
   font-size: 1.25rem;
-}
+} */
 
 .footer__description, 
 .footer__link {
@@ -884,15 +969,18 @@ button {
 .footer__content {
   font-family: 'Cairo', sans-serif;
   gap: 2.5rem 4rem;
+  align-items: center;
 }
 
 .footer__content p{
   white-space: pre-wrap;
 }
 
+
 .footer__title {
-  
+  display: flex;
   margin-bottom: 1rem;
+  justify-content: center;
 }
 
 .footer__title p {
@@ -918,6 +1006,7 @@ button {
   display: flex;
   column-gap: 1rem;
   margin-top: 5%;
+  justify-content: center;
 }
 
 .footer__social-link {
@@ -941,6 +1030,8 @@ button {
   flex-direction: column;
   text-align: center;
   row-gap: 1.5rem;
+  /* width: fit-content; */
+  justify-content: center;
 }
 
 .footer__copy,
@@ -1098,7 +1189,9 @@ button {
   
 
 
-  
+  .value__content{
+
+  }
 
 
   
@@ -1139,42 +1232,6 @@ button {
     justify-content: space-between;
   }
 
-/* .vision__des::after{
-  content: "";
-  position: absolute;
-  width: 399px;
-  height: 399px;
-  background: linear-gradient(170deg,hsl(0deg 0% 100%) 0%,hsl(0, 0%, 22%) 457%);
-  left: -246px;
-  top: 50%;
-  margin-top: -200px;
-  border-radius: 50%;
-}
-
-
-.vision__des::before{
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: linear-gradient(170deg,#ffffff 0%,hsl(0deg 0% 100%) 457%);
-  left: -47%;
-  top: 50%;
-  margin-top: -250px;
-  border-radius: 50%;
-}
-.circal{
-  position: absolute;
-  width: 350px;
-  height: 320px;
-  background: linear-gradient(170deg,hsl(0deg 0% 100%) 0%,hsl(0deg 0% 100%) 457%);
-  left: -271px;
-  top: 50%;
-  margin-top: -160px;
-  border-radius: 50%;
-  z-index: 98;
-}
- */
 .home__images{
   position: absolute;
     justify-self: center;
@@ -1189,6 +1246,28 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     
+}
+
+.home__description1{
+  margin-bottom: 3rem;
+    grid-row: 2/-1;
+    grid-column: 1/-1;
+    padding: 2px 0 2px 67px;
+    margin-top: 25px;
+}
+
+.subscribe__description{
+  align-self: center;
+}
+
+.subscribe__right{
+  align-items: center !important;
+}
+
+.footer__logo{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 }
 
@@ -1262,11 +1341,11 @@ button {
   }
   .home__title {
     margin-bottom: 2rem;
-    direction: rtl;
+    /* direction: rtl; */
   }
   .home__description, 
   .home__search {
-    direction: rtl;
+    /* direction: rtl; */
     margin-bottom: 3rem;
     grid-row: 2/-1;
     grid-column: 1/-1;
@@ -1276,11 +1355,11 @@ button {
   }
 
   .home__description1{
-    direction: rtl;
+    /* direction: rtl; */
     margin-bottom: 3rem;
     grid-row: 2/-1;
     grid-column: 1/-1;
-    padding: 2px 0 2px 329px;
+    padding: 2px 0 2px 67px;
     margin-top: 25px;
   }
 
@@ -1327,8 +1406,8 @@ button {
   .value__container,
   .contact__container, .vision__container {
     align-items: flex-start;
-    column-gap: 5rem;
-    direction: ltr;
+    column-gap: 1rem;
+    /* direction: ltr; */
   }
   .value__orbe,
   .contact__orbe {
@@ -1369,7 +1448,7 @@ button {
   }
   .contact__card-box {
     padding: 28px 1.5rem 1.5rem;
-    direction: ltr;
+    /* direction: ltr; */
   }
 
   .subscribe__container {
@@ -1429,7 +1508,7 @@ button {
   }
   
   .home__container {
-    direction: ltr;
+    /* direction: ltr; */
     column-gap: 5rem;
   }
 }
