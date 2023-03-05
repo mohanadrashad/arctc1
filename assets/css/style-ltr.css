@@ -1,0 +1,72 @@
+.header{
+  direction: ltr;
+}
+
+.home__container{
+  direction: ltr;
+}
+.line__home {
+    direction: ltr;
+    font-family: 'Cairo', sans-serif;
+}
+
+@media screen and (min-width: 1023px){
+.home__description1 {
+    direction: ltr;
+    padding: 2px 67px 2px 0;
+}
+}
+
+.vision{
+  direction: ltr;
+  
+}
+
+.line {
+    position: relative;
+    margin-left: 55px;
+    margin-bottom: 14px;
+}
+
+.line::before {
+    left: -57px;
+}
+
+.value__content{
+  direction: ltr;
+}
+
+.value__images{
+  justify-self: start;
+  transform: scaleX(-1);
+}
+
+.contact__container{
+  direction: ltr;
+}
+
+.contact__images{
+  margin-right: -1.2rem;
+  justify-self: end;
+  width: 86%;
+}
+
+@media screen and (max-width: 770px){
+  .home__images{
+    left: -5.43rem;
+    justify-self: center;
+  }
+
+  .value__images{
+    justify-self: center;
+  }
+}
+
+.contact__images{
+  justify-self: center;
+}
+
+/* 
+.footer__container{
+  direction: ltr;
+} */
